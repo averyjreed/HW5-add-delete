@@ -68,6 +68,10 @@ public class Friends {
     public String toString() {
         return "Friends{" + "friendID=" + friendID + ", friendName=" + friendName + ", emailAddr=" + emailAddr + ", age=" + age + ", facoriteColor=" + facoriteColor + '}';
     }
+
+    public void setFavoriteColor(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
    
     
