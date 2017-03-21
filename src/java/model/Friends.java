@@ -6,22 +6,22 @@ public class Friends {
     private String friendName;
     private String emailAddr;
     private int age;
-    private String facoriteColor;
+    private String favoriteColor;
 
     public Friends() {
         this.friendID = 0;
         this.friendName = "";
         this.emailAddr = "";
         this.age = 0;
-        this.facoriteColor = "";
+        this.favoriteColor = "";
     }
     
-     public Friends(int friendID, String friendName, String emailAddr, int age, String facoriteColor) {
+     public Friends(int friendID, String friendName, String emailAddr, int age, String favoriteColor) {
         this.friendID = friendID;
         this.friendName = friendName;
         this.emailAddr = emailAddr;
         this.age = age;
-        this.facoriteColor = facoriteColor;
+        this.favoriteColor = favoriteColor;
     }
 
     public int getFriendID() {
@@ -56,24 +56,18 @@ public class Friends {
         this.age = age;
     }
 
-    public String getFacoriteColor() {
-        return facoriteColor;
+    public String getFavoriteColor() {
+        return favoriteColor;
     }
 
-    public void setFacoriteColor(String facoriteColor) {
-        this.facoriteColor = facoriteColor;
+    public void setFavoriteColor(String favoriteColor) {
+        this.favoriteColor = favoriteColor;
     }
 
     @Override
     public String toString() {
-        return "Friends{" + "friendID=" + friendID + ", friendName=" + friendName + ", emailAddr=" + emailAddr + ", age=" + age + ", facoriteColor=" + facoriteColor + '}';
+        return "Friends{" + "friendID=" + friendID + ", friendName=" + friendName + ", emailAddr=" + emailAddr + ", age=" + age + ", favoriteColor=" + favoriteColor + '}';
     }
-
-    public void setFavoriteColor(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-   
-    
+       
     
 }
