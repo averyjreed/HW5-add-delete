@@ -3,23 +3,23 @@ package model;
 
 public class Friends {
     private int friendID;
-    private String friendName;
-    private String emailAddr;
+    private String familyMember;
+    private String name;
     private int age;
     private String favoriteColor;
 
     public Friends() {
         this.friendID = 0;
-        this.friendName = "";
-        this.emailAddr = "";
+        this.familyMember = "";
+        this.name = "";
         this.age = 0;
         this.favoriteColor = "";
     }
     
-     public Friends(int friendID, String friendName, String emailAddr, int age, String favoriteColor) {
+     public Friends(int friendID, String familyMember, String name, int age, String favoriteColor) {
         this.friendID = friendID;
-        this.friendName = friendName;
-        this.emailAddr = emailAddr;
+        this.familyMember = familyMember;
+        this.name = name;
         this.age = age;
         this.favoriteColor = favoriteColor;
     }
@@ -32,20 +32,20 @@ public class Friends {
         this.friendID = friendID;
     }
 
-    public String getFriendName() {
-        return friendName;
+    public String getFamilyMember() {
+        return familyMember;
     }
 
-    public void setFriendName(String friendName) {
-        this.friendName = friendName;
+    public void setFamilyMember(String familyMember) {
+        this.familyMember = familyMember;
     }
 
-    public String getEmailAddr() {
-        return emailAddr;
+    public String getName() {
+        return name;
     }
 
-    public void setEmailAddr(String emailAddr) {
-        this.emailAddr = emailAddr;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getAge() {
@@ -66,7 +66,7 @@ public class Friends {
 
     @Override
     public String toString() {
-        return "Friends{" + "friendID=" + friendID + ", friendName=" + friendName + ", emailAddr=" + emailAddr + ", age=" + age + ", favoriteColor=" + favoriteColor + '}';
+        return "Friends{" + "friendID=" + friendID + ", familyMember=" + familyMember + ", name=" + name + ", age=" + age + ", favoriteColor=" + favoriteColor + '}';
     }
        
     

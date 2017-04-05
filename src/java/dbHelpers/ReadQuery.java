@@ -22,7 +22,7 @@ public class ReadQuery {
     public ReadQuery(){
         
     Properties props = new Properties(); //MWC
-    InputStream instr = getClass().getResourceAsStream("dbConn.Properties");
+    InputStream instr = getClass().getResourceAsStream("dbConn.properties");
         try {
             props.load(instr);
         } catch (IOException ex) {
@@ -67,7 +67,7 @@ public class ReadQuery {
 
 public String getHTMLTable() {
     String table = "";
-    table += "<table border=1";
+    table += "<table border=1>";
     
     
         try {
@@ -75,8 +75,8 @@ public String getHTMLTable() {
                 
                 Friends friend = new Friends();
                 friend.setFriendID(this.results.getInt("friendID"));
-                friend.setFriendName(this.results.getString("friendName"));
-                friend.setEmailAddr(this.results.getString("emailAddr"));
+                friend.setFamilyMember(this.results.getString("familyMember"));
+                friend.setName(this.results.getString("name"));
                 friend.setAge(this.results.getInt("age"));
                 friend.setFavoriteColor(this.results.getString("favoriteColor"));
                 
@@ -86,11 +86,11 @@ public String getHTMLTable() {
                 table +="</td>";
                 
                 table+="<td>";
-                table+= friend.getFriendName();
+                table+= friend.getFamilyMember();
                 table +="</td>";
                 
                 table+="<td>";
-                table+= friend.getEmailAddr();
+                table+= friend.getName();
                 table +="</td>";
                 
                 table+="<td>";

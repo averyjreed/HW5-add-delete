@@ -3,11 +3,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>My Firends</title>
+        <title>My Family</title>
     </head>
     <body>
-        <h1>My Friends Database</h1>
+        <h1>My Family Database</h1>
         
-        <a href="read">View All Friends</a>
+        <a href="read">View My Family</a>
     </body>
 </html>
