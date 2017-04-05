@@ -5,13 +5,16 @@
  */
 package controller;
 
+import dbHelpers.AddQuery;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Friends;
 
 /**
  *
@@ -58,7 +61,8 @@ public class AddServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+            doPost(request, response);
     }
 
     /**
@@ -72,7 +76,34 @@ public class AddServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+       
+        //get the data
+        String memberType = request.getParameter("memberType");
+        String name = request.getParameter("name");
+        int age = Integer.parseInt(request.getParameter("age"));
+        String color = request.getParameter("color");
+                
+        //set up a friend object
+        Friends friend = new Friends();
+        friend.setFamilyMember(memberType);
+        friend.setName(name);
+        friend.setAge(age);
+        friend.setFavoriteColor(color);
+        
+        //set up an addQuery object
+        AddQuery aq = new AddQuery();
+        
+        //pass the friend to addQuery to add to the database
+        aq.doAdd(friend);
+        
+        //pass execution controm to the ReadServlet
+        String url = "/read";
+        
+        RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+        dispatcher.forward (request, response);
+        
+        
+        
     }
 
     /**

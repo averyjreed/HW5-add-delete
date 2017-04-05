@@ -16,7 +16,7 @@
             <input type="text" name="memberType" value="" />
             <br>
             <label>Member's Name: </label>
-            <input type="text" name="memberName" value="" />
+            <input type="text" name="name" value="" />
             <br>
             <label>Age: </label>
             <input type="text" name="age" value="" />
