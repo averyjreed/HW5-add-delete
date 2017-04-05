@@ -101,6 +101,9 @@ public String getHTMLTable() {
                 table+= friend.getFavoriteColor();
                 table +="</td>";
                 
+                table+="<td>";
+                table+= "<a href=delete?friendID=" +friend.getFriendID()+ "> Delete </a>";
+                table +="</td>";
                 
                 table+= "</tr>";
             }   } catch (SQLException ex) {
