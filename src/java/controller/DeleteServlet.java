@@ -5,8 +5,10 @@
  */
 package controller;
 
+import dbHelpers.DeleteQuery;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -74,7 +76,24 @@ public class DeleteServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+
+            //get the friendID
+            int friendID = Integer.parseInt(request.getParameter("friendID"));
+            
+            //create a deleteQuery object
+            DeleteQuery dq = new DeleteQuery();
+            
+            //use deleteQuery to delete the object
+            dq.doDelete(friendID);
+            
+            //pass execution on to the ReadServlet
+            String url ="/read";
+            
+            RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+            dispatcher.forward (request, response);
+
+
+
     }
 
     /**

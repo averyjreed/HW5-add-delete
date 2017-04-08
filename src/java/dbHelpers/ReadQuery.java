@@ -102,7 +102,7 @@ public String getHTMLTable() {
                 table +="</td>";
                 
                 table+="<td>";
-                table+= "<a href=delete?friendID=" +friend.getFriendID()+ "> Delete </a>";
+                table+= "<a href=delete?friendID=" + friend.getFriendID() + "> Delete </a>";
                 table +="</td>";
                 
                 table+= "</tr>";

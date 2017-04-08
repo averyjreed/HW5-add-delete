@@ -58,7 +58,7 @@ public class DeleteQuery {
         
         try {
             //set up a string to hold our query
-            String query = "DELETE FROM friend WHERE friendID = ?";
+            String query = "DELETE FROM friends WHERE friendID = ?";
             
             //create a preparedstatement using our query string
             PreparedStatement ps = conn.prepareStatement(query);
@@ -68,6 +68,7 @@ public class DeleteQuery {
             
             //execute the query
             ps.executeUpdate();
+            
         } catch (SQLException ex) {
             Logger.getLogger(DeleteQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
